@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Do You Love Me?</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Page 0 -->
+<div id="page0" class="page active">
+  <h1>Heyy ek question puchna h... 💖</h1>
+  <p style="color:#fff; font-size: 1.2em;">Please sach sach batana, pinkyyy promiseeeee kro! 😣<br/> Meri kasam h jhut nhi bolna h 🙈</p>
+  <button onclick="nextPage(0,1)">Okay, I pinky promise 🤞💗</button>
+</div>
+
+<!-- Page 1 -->
+<div id="page1" class="page">
+  <h1>Do you love me? 🥺💕</h1>
+  <div style="display: flex; flex-direction: column; gap: 15px;">
+    <button onclick="respond('yes')">Yes ❤️</button>
+    <button onclick="respond('no')">No 😢</button>
+  </div>
+  <div class="response" id="response1"></div>
+</div>
+
+<!-- Page 2 -->
+<div id="page2" class="page">
+  <h2>How much do you love me? 😚</h2>
+  <div>
+    <input type="range" id="loveSlider" min="0" max="100" value="50" oninput="updateLoveValue(this.value)" />
+    <div class="response" id="loveValue">50%</div>
+    <button onclick="showFinalMessage()">Tell Me 💬</button>
+  </div>
+</div>
+
+<!-- Page 3 -->
+<div id="page3" class="page">
+  <div class="final-message" id="finalMessage"></div>
+  <div class="thank-you" id="thankYouMessage"></div>
+  <div class="love-note" id="loveNote"></div>
+</div>
+
+<!-- Floating Hearts -->
+<div class="hearts" id="hearts"></div>
+
+
+<script src="script.js"></script>
+</body>
+</html>
